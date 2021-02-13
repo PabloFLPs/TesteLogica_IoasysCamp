@@ -1,0 +1,39 @@
+void main(){
+    imprimir(0);
+}
+void imprimir(){
+    if (num <= 10){
+        printf(++num + ", ");
+        imprimir(num);
+    }
+}
+
+Pablo Felipe
+A recursao feita atraves da chamada "imprimir(num)" dentro da propria "imprimir()" funciona cmo um laco de repeticao.
+A cada repeticao, temos a impressao de "++num" (que neste caso n faz diferenca ser ++num ou num++).
+Como "num" comeca com 0, mas ha um incremento "++" antes da impressao da msm, os valores impressos comecam em 1, e
+seguem p padrao num + 1 para cada repeticao, ate num <= 10, onde para essa repeticao, o valor impresso sera 10 + 1 = 11.
+
+Resposta: 1, 2, 3, ..., 11,
+
+
+Codigo Teste:
+/*
+#include <stdio.h>
+
+int imprimir(int num){
+    if (num <= 10){
+        printf("%d, ", ++num);
+        //++num;
+        imprimir(num);
+        //printf("%d, ", num);
+        /*A logica do que foi comentado, imprime de traz para frente, adentrando
+        a recursividade ate o "miolo" e printando apos isso.*/
+    }
+    return 0;
+}
+
+void main(){
+    imprimir(0);
+}
+*/

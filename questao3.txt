@@ -1,0 +1,14 @@
+funcao funcaoA(x, n):
+    se n==0:
+        retorna 1
+    else:
+        retorna x * funcaoA(x, n-1)
+fim funcaoA
+
+Pablo Felipe
+Com x^n, e n=0, temos que x^n=1, para qualquer valor de x. Isso da origem ao caso base da "funcaoA()" (que tambem serve
+como condicao de parada da recursividade adiante).
+Se "n" for diferente de 0, entao temos que x^n = (x * (x^(n-1))), que e exatamente o retorno do segundo caso da "funcaoA()".
+Esse codigo se refere entao a uma logica para calculo exponencial de um numero "x" qualquer.
+
+Resposta: Exponenciacao

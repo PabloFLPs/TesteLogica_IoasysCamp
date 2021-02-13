@@ -1,0 +1,23 @@
+constante a = 1
+variavel b = 0
+enquanto b < 3 faca
+    a = a + 1
+    b = b + 1
+    end
+imprima a
+
+Pablo Felipe
+A variavel "a" foi declarada como constante, logo seu valor n se altera. Ent a resposta e 1.
+
+Resposta: 1
+
+Mas para conhecimento, a logica do codigo caso "a" nao fosse uma constante, seria a seguinte:
+A variavel "b" e o contador de iteracoes do laco de repeticao.
+A condicao de parada do laco, e b<0; ent para cada iteracao, temos:
+
+Antes do laco de repeticao: b=0 e a=1;
+1- b=0; a=1+1=2 e b=0+1=1;
+2- b=1; a=2+1=3 e b=1+1=2;
+3- b=2; a=3+1=4 e b=2+1=3.
+
+Apos a 3 iteracao, n entra mais no laco de repeticao e imprime o valor de a, que e 4.

@@ -1,0 +1,58 @@
+funcao misterio(L, n):
+    se n == 1:
+        retorna L[0]
+    se nao:
+        m = misterio(L, n-1)
+    se m > L[n-1]:
+        retorna m
+    se nao:
+        retorna L[n-1]
+fim misterio
+
+funcao misterio2(L):
+    n = len(L)
+    retorna misterio(L, n)
+fim misterio2
+
+Pablo Felipe
+A funcao "misterio()" faz o seguinte:
+Se o tamanho (n) do vetor L for 1, retorna o unico elemento de L, na cuja posicao e 0 (L[0]);
+Se nao, faz a recursao da funcao para (n-1);
+Se "m" for maior que o elemento do vetor na posicao n-1 (L[n-1]), retorna o valor de "m";
+Se nao, retorna o proprio L[n-1] (sendo este o maior, em relacao a comparacao cm "m").
+
+A funcao "misterio2()" faz o seguinte:
+Salva em "n" o tamanho do vetor L[];
+Retorna "misterio(L, n)".
+
+Como a recursividade, esta antes da logica de salvar o maior valor em "m", a funcao "misterio()" retorna
+o maior valor de L. Como "misterio2()", retorna a funcao "misterio()":
+
+Reposta: retorna o maior elemento do vetor.
+
+Codigo Teste:
+/*
+#include <stdio.h>
+
+int misterio(int L[], int n){
+    int m = 0;
+    if (n == 1){
+        return L[0];
+    }
+    else{
+        m = misterio(L, n-1);
+    }
+    if (m > L[n-1]){
+        return m;
+    }
+    else{
+        return L[n-1];
+    }
+}
+
+int main(){
+    int L[7] = {3, 4, 8, 67, 34, 1777482, 8778};
+    int n = 7;
+    printf("%d", misterio(L, n));
+}
+*/
